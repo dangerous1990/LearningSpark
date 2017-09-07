@@ -13,7 +13,9 @@ object SparkCSV {
       .option("header", "true") // Use first line of all files as header
       .option("inferSchema", "true") // Automatically infer data types
       .load("/home/limeng/player_season.csv")
-    df.show()
-    df.select("球员", "球队").show()
+  //  df.show()
+    df.printSchema()
+    //df.select("球员", "球队").show()
+    //sqlContext.sql("select ")
   }
 }
