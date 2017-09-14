@@ -29,6 +29,7 @@ object ExternalDatasets {
     //操作2：最后将所有对象合并为一个对象
     // _占位符 代表函数的参数
     rdd.flatMap(_.split(" ")).map((_, 1)).reduceByKey(_ + _).collect().foreach(println(_))
+    rdd.flatMap(_.split(" ")).map((_, 1)).collect().foreach(println(_))
 
   }
 
